@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/basicFragment"
+        android:icon="@drawable/ic_basic"
+        android:title="@string/nav_basic"/>
+    <item
+        android:id="@+id/intermediateFragment"
+        android:icon="@drawable/ic_intermediate"
+        android:title="@string/nav_intermediate"/>
+    <item
+        android:id="@+id/advancedFragment"
+        android:icon="@drawable/ic_advanced"
+        android:title="@string/nav_advanced"/>
+</menu>

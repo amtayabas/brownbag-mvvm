@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/basicFragment">
+
+    <fragment
+        android:id="@+id/basicFragment"
+        android:name="csv.brownbag.mvvm.basic.view.BasicFragment"
+        android:label="fragment_basic"
+        tools:layout="@layout/fragment_basic" />
+    <fragment
+        android:id="@+id/intermediateFragment"
+        android:name="csv.brownbag.mvvm.intermediate.view.IntermediateFragment"
+        android:label="fragment_intermediate"
+        tools:layout="@layout/fragment_intermediate" />
+    <fragment
+        android:id="@+id/advancedFragment"
+        android:name="csv.brownbag.mvvm.advanced.view.AdvancedFragment"
+        android:label="fragment_advanced"
+        tools:layout="@layout/fragment_advanced" >
+        <action
+            android:id="@+id/action_advancedFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="csv.brownbag.mvvm.movie.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <argument
+            android:name="selectedMovie"
+            app:argType="csv.brownbag.mvvm.advanced.model.Movie"
+            app:nullable="true" />
+    </fragment>
+</navigation>
